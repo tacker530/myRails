@@ -6,11 +6,11 @@ Ruby on Rails7 template
 これを複製して次のコマンドを実行します。
 
 ```
-docker-compose build
+docker compose build
 ```
 
 ```
-docker-compose run web rails new . --database=mysql
+docker compose run --rm web rails new . --database=mysql
 ```
 
 エディタでconfig/database.yml のパスワードを設定する。（docker-compose.ymlに合わせて）
@@ -25,10 +25,11 @@ default: &default
   host: db
 ```
 
+
 ```
-docker-compose build
-docker-compose up -d
-docker-compose run --rm web rails db:create
+docker compose build
+docker compose up -d
+docker compose run --rm web rails db:create
 ```
 
 順調に進んだら、Google chromeやSafariなどのブラウザを開き、リンク欄から「 [http://localhost:3000](http://localhost:3000/) 」を入力します。
