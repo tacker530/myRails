@@ -1,9 +1,9 @@
 FROM ruby:3.1
 
-WORKDIR /app1
+WORKDIR /apps
 
-COPY Gemfile /app1/Gemfile
-COPY Gemfile.lock /app1/Gemfile.lock
+COPY Gemfile /apps/Gemfile
+COPY Gemfile.lock /apps/Gemfile.lock
 
 RUN bundle install
 

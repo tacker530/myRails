@@ -12,7 +12,7 @@ services:
   web:
     build: .
     volumes:
-      - .:/app1
+      - .:/apps
     ports:
       - 3000:3000
     depends_on:
